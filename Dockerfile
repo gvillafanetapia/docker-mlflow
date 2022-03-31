@@ -5,4 +5,4 @@ RUN pip install PyMySQL==0.9.3 && \
     pip install mlflow[extras]==1.18.0 && \
     pip install gevent
 
-ENTRYPOINT ["mlflow", "server", "--gunicorn-opts", "'--timeout 120 --worker-class gevent --worker-connections 1000'"]
+ENTRYPOINT ["mlflow", "server", "--gunicorn-opts", "--timeout 120 --worker-class gevent --worker-connections 1000"]
